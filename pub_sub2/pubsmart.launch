@@ -1,0 +1,20 @@
+<launch>
+  <node
+    pkg="turtlesim"
+    type="turtlesim_node"
+    name="turtlesim"
+    respawn="true"
+  />
+  <node
+    pkg="pub_sub2"
+    type="pubvel"
+    name="publish_velocity"
+    required="true"
+  />
+  <node
+    pkg="pub_sub2"
+    type="subpose"
+    name="pose_subscriber"
+    output="screen"
+  />
+</launch>
